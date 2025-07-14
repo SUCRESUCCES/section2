@@ -23,6 +23,20 @@ let user2 = {
     bio: "얌이는 천사고양이에요",
     location: "파주",
 };
+let countryCodes = {
+    Korea: "ko",
+    UnitedState: "us",
+    UnitedKingdom: "uk",
+};
+let countryNumberCodes = {
+    Korea: 410,
+};
 export {};
-// 타입 별칭을 사용할 때 주의할 점
-// 1. 타입 별칭은 중복 선언이 불가능합니다. ex) Type User ={}
+// 인덱스 시그니처 사용시 주의할 점
+// type CountryNumberCodes = {
+//   [Key: string]: number;
+//   Korea: string; // 필수 프로퍼티
+// };
+// let countryNumberAndStringCodes: CountryNumberCodes = {
+//   Korea: "ko", // 타입이 맞지 않아 오류 발생
+// };
