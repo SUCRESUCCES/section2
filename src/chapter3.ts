@@ -1,5 +1,7 @@
 // object
 
+import { read } from "fs";
+
 // 객체 리터럴 타입
 let user: {
   id?: number; // ?는 선택적 property(optional property)를 의미합니다
@@ -31,11 +33,13 @@ let user: {
 // };
 // 위에서 id를 선택적 프로퍼티 사용함
 
-let config = {
-  readonly apiKey: string; // readonly는 읽기 전용 프로퍼티를 의미합니다
+let config: {
+  readonly apiKey: string;
+} = {
+  apiKey: "MY API KEY", // readonly는 읽기 전용 프로퍼티를 의미합니다
 };
 
 // 절대 수정이 불가능한 프로퍼티는 readonly로 선언합니다
 
-// config.apiKey = "hacked";
+//config.apiKey = "hacked";
 // 자바스크립트에서는 이런 식으로 프로퍼티의 값 변경이 가능했음
